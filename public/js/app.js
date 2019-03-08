@@ -3,8 +3,6 @@ const search = document.querySelector('input')
 const msg1 = document.querySelector('#msg-1')
 const msg2 = document.querySelector('#msg-2')
 
-
-
 weatherForm.addEventListener('submit', (e) => {
 
     e.preventDefault()
@@ -16,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
     if(!location) {
         console.log('Enter a Location')
     } else {
-        const url = 'http://localhost:3000/weather?address=' + location
+        const url = '/weather?address=' + location
         fetch(url).then((response) => {
             response.json().then((data) =>{
 
